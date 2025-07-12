@@ -35,9 +35,15 @@ $checkQuery = mysqli_num_rows($runQuery);
             <h2>Onjana</h2>
          </div>
          <div id="account-Container">
-            <div id="accountLink">
-               <a href="logout.php">Logout</a>
-               <a href="update.php?id=<?php echo $storeData['customerID']; ?>">Edit Profile</a>
+            <div id="account-container-wrapper">
+               <div id="accountHolderName">
+                  <h6> <?php echo $storeData['FullName']; ?> </h6>
+               </div>
+               <div id="accountLink">
+                  <a href="update.php?id=<?php echo $storeData['customerID']; ?>">Edit Profile</a>
+                  <a href="logout.php">Logout</a>
+                  <a href="#">Delete Account</a>
+               </div>
             </div>
          </div>
          <div id="rightContainer">
