@@ -42,7 +42,7 @@ $checkQuery = mysqli_num_rows($runQuery);
                <div id="accountLink">
                   <a href="update.php?id=<?php echo $storeData['customerID']; ?>">Edit Profile</a>
                   <a href="logout.php">Logout</a>
-                  <a href="#">Delete Account</a>
+                  <a href="accountDelete.php?id=<?php echo $storeData['customerID']; ?>">Delete Account</a>
                </div>
             </div>
          </div>
