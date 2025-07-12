@@ -120,3 +120,30 @@ body{
     background-color: #0808cc;
 }
 
+#updateBtn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.updateBtn{
+    width: 8vw;
+    color: #000;
+    background-color: #aded18;
+}
+
+#closeBtn{
+    position: absolute;
+    right: 35%;
+    top: 20%;
+    padding: 8px;
+}
+
+#closeBtn a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 560; 
+}
+
+

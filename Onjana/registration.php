@@ -34,6 +34,7 @@
          <div class="input-wrapper" id="signupBtn-wrapper">
             <input id="signupBtn" type="submit" name="signup">
         </div>
+        
          <div class="input-wrapper" id="form-link">
             <span>Already have an account?<a href="login.php">Login</a></span>
         </div>

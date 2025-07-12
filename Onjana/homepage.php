@@ -1,5 +1,22 @@
 <?php
 include("connection.php");
+session_start();
+
+$email = $_SESSION['gmail'];
+$password = $_SESSION['password'];
+
+if($email == true && $password == true){
+
+}else{
+   header("Location: login.php");
+}
+ 
+$selectQuery = "SElECT * FROM customer WHERE Email = '$email' AND Password = '$password' ";
+$runQuery = mysqli_query($conn, $selectQuery);
+$checkQuery = mysqli_num_rows($runQuery);
+
+ $storeData = mysqli_fetch_assoc($runQuery);
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +37,7 @@ include("connection.php");
          <div id="account-Container">
             <div id="accountLink">
                <a href="logout.php">Logout</a>
-               <a href="update.php">Edit Profile</a>
+               <a href="update.php?id=<?php echo $storeData['customerID']; ?>">Edit Profile</a>
             </div>
          </div>
          <div id="rightContainer">
@@ -169,14 +186,14 @@ include("connection.php");
          </div>
 
        </div> 
-       </div>
+      </div>
 
-   <div id="footer-Container">
-      <span>Copyright&copy; 2025 all right reserve by Onjana Rajbanshi.</span>
-   </div>
+      <div id="footer-Container">
+       <span>Copyright&copy; 2025 all right reserve by Onjana Rajbanshi.</span>
+      </div>
 
     </div>
 
     <script src="script/homepage.js"></script>
 </body>
-</html>
+</html> 
