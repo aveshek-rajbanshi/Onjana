@@ -38,6 +38,7 @@ $checkQuery = mysqli_num_rows($runQuery);
             <div id="account-container-wrapper">
                <div id="accountHolderName">
                   <h6> <?php echo $storeData['FullName']; ?> </h6>
+                  <span> <?php echo $storeData['Email']; ?></span>
                </div>
                <div id="accountLink">
                   <a href="update.php?id=<?php echo $storeData['customerID']; ?>">Edit Profile</a>

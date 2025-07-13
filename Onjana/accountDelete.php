@@ -16,7 +16,7 @@
    $runQuery = mysqli_query($conn, $deleteQuery);
 
    if($runQuery){
-    header("Location: registration.php");
+    header("Location: landingpage.php");
    }else{
    echo " <script> alert('Your account is not deleted.');</script>";
    header("Location: homepage.php");
